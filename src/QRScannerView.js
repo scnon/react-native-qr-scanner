@@ -161,7 +161,7 @@ export default class QRScannerView extends Component {
 
   //绘制扫描线
   _renderScanBar = () => {
-    if (!this.props.isShowScanBar) 
+    if (!this.props.isShowScanBar)
       return;
     if (this.props.scanBarImage) {
       return <Image
@@ -312,7 +312,8 @@ export default class QRScannerView extends Component {
       this.state.animatedValue,
       {toValue: this.props.rectHeight,
       duration: this.props.scanBarAnimateTime,
-      easing: Easing.linear
+      easing: Easing.linear,
+      useNativeDriver: true,
     }).start(() => this.scannerLineMove());
   }
 }
