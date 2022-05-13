@@ -9,7 +9,8 @@ def computeVersionName() {
 }
 buildscript {
     repositories {
-        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        // jcenter()
     }
 
     dependencies {
